@@ -23,7 +23,7 @@ This is an app called LIRI. LIRI is a _Language_ Interpretation and Recognition 
      * Date of the Event
 
 **example of command 1:**
-![concert-Example](ScreenShots/concert-this.png)
+![concert-Example](ScreenShots/concert.png)
 
 **Command 2:**
    ``` node liri.js spotify-this-song "song's name to look for"  ```
@@ -34,7 +34,13 @@ This is an app called LIRI. LIRI is a _Language_ Interpretation and Recognition 
      * A preview link of the song from Spotify
      * The album that the song is from
 
+**example for command 2 with song entered**
+![spotify-example-1](ScreenShots/spotify-1_with_song.png)
+
 If no song is provided then the program will default to "The Sign" by Ace of Base.
+
+**example for commmand 2 with no song entered**
+![spotify-example-2](ScreenShots/spotidy-without-input.png)
 
 **_Notes_:**
 You will need your own spotify api keys to make this work.
@@ -68,6 +74,10 @@ this image shows the two conditions described above.
 LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 
 It will run `spotify-this-song` command and search for the song's name  "I Want it That Way," as the text in the `random.txt`.
+
+**example of command 4:**
+
+![do-what-it-says-in-random.txt](ScreenShots/do-it.png)
 
 You could try to edit the text in the `random.txt` file to try other commands
 

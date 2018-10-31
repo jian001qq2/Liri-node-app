@@ -36,21 +36,26 @@ switch(action){
 /*//first declare variable to capture the name of the songs if unable then just use the name in the general
 it will output the following:
 //artists, song's name, preview link of the song from spotify, album of the song, 
-//the default song is The sign by Ace of Base.
+//the default song is The sign by Ace of Base when user doesn't input a song
  */
-//issue item that not working
+
 var spotify = new Spotify(keys.spotify);
 
 function spotifyThisSong(){
-  //To declare a variable that handle two condition if true, grab the naem, else the sign
-  var song =nameInput || "The Sign";
+  //To declare a variable to take the input
+  var song=nameInput;
+  //make a if statement to handle when no input
+  if (!song) {
+    song= "The sign";
+  }
   spotify.search({ 
-    type: 'track', query: song 
+    type: 'track', query: song
 }, function (err, data){
   if (err) {
     return console.log("Error Code: " + err);
 
   };
+  
     var songs = data.tracks.items;
     for (let i = 0; i < songs.length; i++) {
       console.log("\nResult "+(i+1));
